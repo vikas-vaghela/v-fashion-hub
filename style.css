@@ -115,3 +115,156 @@ footer {
     object-fit: cover; 
     border-radius: 5px;
 }
+
+/* =======================================================
+   FLIPKART STYLE MOBILE RESPONSIVE (100% SCREEN FIX)
+   ======================================================= */
+
+/* 1. Poori window ko lock karein taaki right side ka white space gayab ho jaye */
+html, body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* 2. Jab website mobile screen (768px se choti) par khulegi */
+@media (max-width: 768px) {
+    
+    /* Navbar/Header Adjustment */
+    header, .navbar {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important; /* Logo upar, links niche */
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+
+    /* Logo Container ko center karein */
+    .logo-container {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Logo ka size mobile ke hisab se perfect fit */
+    .site-logo {
+        width: 150px !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+
+    /* Nav links ek line me center */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 5px 0 0 0 !important;
+        list-style: none !important;
+    }
+
+    .nav-links li a {
+        font-size: 14px !important;
+        text-decoration: none;
+        color: #212121;
+        font-weight: 500;
+    }
+
+    /* Top Banner Adjustment */
+    .banner, .banner-container, img[src*="banner"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    header + div img, .banner img {
+        width: 100% !important;
+        height: 200px !important; /* Mobile par banner height auto filter */
+        object-fit: cover !important;
+    }
+
+    /* Headings */
+    h2 {
+        font-size: 18px !important;
+        text-align: center !important;
+        margin: 15px 0 5px 0 !important;
+    }
+
+    /* Flipkart Jaisa 2-Column Product Layout */
+    .product-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Ek line me 2 cards */
+        gap: 8px !important;
+        padding: 8px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Product Card Mobile Design */
+    .product-card {
+        background: #ffffff !important;
+        border-radius: 4px !important;
+        padding: 8px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+
+    /* Card ke andar ki photo */
+    .product-card img {
+        width: 100% !important;
+        height: 130px !important;
+        object-fit: contain !important;
+        margin-bottom: 5px !important;
+    }
+
+    .product-card p {
+        font-size: 13px !important;
+        margin: 3px 0 !important;
+        text-align: center !important;
+    }
+
+    /* Orange "Buy Now" Button */
+    .buy-btn {
+        width: 100% !important;
+        padding: 8px 0 !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        background-color: #ff9f00 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 2px !important;
+        margin-top: 5px !important;
+        cursor: pointer;
+    }
+
+    /* Order Details Form Box Fix */
+    .modal-content {
+        width: 90% !important;
+        max-width: 95% !important;
+        padding: 15px !important;
+        margin: 10% auto !important;
+    }
+    
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
