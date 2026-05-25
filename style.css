@@ -269,3 +269,258 @@ html, body {
         box-sizing: border-box !important;
     }
 }
+
+
+
+
+/* Jo class aapne HTML me likhi hai, usi ka style */
+.your-button-class {
+    background-color: #1b8a3e; /* Green color */
+    color: white;              /* White text */
+    border: none;              /* Black border hatane ke liye */
+    padding: 10px 24px;        /* Button ka size bada karne ke liye */
+    font-size: 16px;           /* Text size */
+    font-weight: bold;         /* Text ko bold karne ke liye */
+    border-radius: 6px;        /* Round corners */
+    cursor: pointer;           /* Hover karne par hand icon */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+.your-button-class:hover {
+    background-color: #146c2f; /* Hover karne par dark green */
+}
+
+
+collection ke liye
+
+/* General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Navbar Styling (Just for reference) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #1b8a3e; /* Active page green dikhega */
+}
+
+/* ==========================================
+   COLLECTION PAGE STYLES 
+   ========================================== */
+.collection-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #222;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1b8a3e;
+    margin-bottom: 15px;
+}
+
+/* Green Buy Now Button code from earlier */
+.your-button-class {
+    background-color: #1b8a3e;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.your-button-class:hover {
+    background-color: #146c2f;
+}
+
+/* ==========================================
+   CONTACT PAGE STYLES 
+   ========================================== */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.contact-box {
+    background: #fff;
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-box h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #222;
+}
+
+.contact-box p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #1b8a3e; /* Focus karne par border green hoga */
+}
+
+.submit-btn {
+    background-color: #1b8a3e;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #146c2f;
+}
+
+
+slider ke liye
+
+/* Slider ka main frame */
+.slider-container {
+    width: 100%;
+    max-width: 1200px; /* Aapke content ke hisab se width */
+    margin: 20px auto;  /* Upar-neeche thoda gap aur center alignment */
+    overflow: hidden;   /* Jo images screen se bahar hain wo chhup jayengi */
+    border-radius: 8px; /* Corners thode round karne ke liye */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sabhi slides ko ek line me lane ke liye wrapper */
+.slider {
+    display: flex;
+    width: 300%; /* Agar 3 images hain to 300% (jitni images, utna guna) */
+    transition: transform 0.5s ease-in-out; /* Slide hone ka smooth effect */
+}
+
+/* Har ek single slide ki styling */
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Image stretch nahi hogi */
+    display: block;
+}
