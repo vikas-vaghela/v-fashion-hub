@@ -179,6 +179,8 @@
             modal.style.display = "none";
         }
     }
+
+    
 </script>
     <script>
     const slider = document.querySelector('.slider');
@@ -194,7 +196,7 @@
         }
         
         // Images ko smoothly left side slip (translate) karne ka logic
-        slider.style.transform = translateX(-${index * 100}%);
+        slider.style.transform = 'translateX(-${index * 100}%)';
     }
 
     // Har 3 second (3000 milliseconds) me banner apne aap slip hoga
