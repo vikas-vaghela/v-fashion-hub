@@ -494,33 +494,6 @@ body {
 }
 
 
-slider ke liye
-
-/* Slider ka main frame */
-.slider-container {
-    width: 100%;
-    max-width: 1200px; /* Aapke content ke hisab se width */
-    margin: 20px auto;  /* Upar-neeche thoda gap aur center alignment */
-    overflow: hidden;   /* Jo images screen se bahar hain wo chhup jayengi */
-    border-radius: 8px; /* Corners thode round karne ke liye */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Sabhi slides ko ek line me lane ke liye wrapper */
-.slider {
-    display: flex;
-    width: 300%; /* Agar 3 images hain to 300% (jitni images, utna guna) */
-    transition: transform 0.5s ease-in-out; /* Slide hone ka smooth effect */
-}
-
-/* Har ek single slide ki styling */
-.slide {
-    width: 100%;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
     object-fit: cover; /* Image stretch nahi hogi */
     display: block;
 }
