@@ -156,3 +156,40 @@ footer {
     padding: 40px 0;
     margin-top: 50px;
 }
+
+/* Slider ka main frame */
+.slider-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Saari images ko ek line mein laane ke liye */
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease-in-out; /* Isse Flipkart jaisa slip effect aayega */
+}
+
+/* Har ek single slide ki width */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Banner photo ka size fix karne ke liye */
+.slide img {
+    width: 100%;
+    height: 350px; /* Laptop par height */
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobile screens ke liye responsiveness */
+@media (max-width: 768px) {
+    .slide img {
+        height: 180px; /* Mobile par height choti ho jayegi */
+    }
+}
