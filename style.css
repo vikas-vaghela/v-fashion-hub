@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #2c3e50;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #27ae60;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Products */
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+}
+
+.buy-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background: #219150;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 40px;
+}
+.product-card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+
+/* =======================================================
+   FLIPKART STYLE MOBILE RESPONSIVE (100% SCREEN FIX)
+   ======================================================= */
+
+/* 1. Poori window ko lock karein taaki right side ka white space gayab ho jaye */
+html, body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* 2. Jab website mobile screen (768px se choti) par khulegi */
+@media (max-width: 768px) {
+    
+    /* Navbar/Header Adjustment */
+    header, .navbar {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important; /* Logo upar, links niche */
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+
+    /* Logo Container ko center karein */
+    .logo-container {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Logo ka size mobile ke hisab se perfect fit */
+    .site-logo {
+        width: 150px !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+
+    /* Nav links ek line me center */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 5px 0 0 0 !important;
+        list-style: none !important;
+    }
+
+    .nav-links li a {
+        font-size: 14px !important;
+        text-decoration: none;
+        color: #212121;
+        font-weight: 500;
+    }
+
+    /* Top Banner Adjustment */
+    .banner, .banner-container, img[src*="banner"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    header + div img, .banner img {
+        width: 100% !important;
+        height: 200px !important; /* Mobile par banner height auto filter */
+        object-fit: cover !important;
+    }
+
+    /* Headings */
+    h2 {
+        font-size: 18px !important;
+        text-align: center !important;
+        margin: 15px 0 5px 0 !important;
+    }
+
+    /* Flipkart Jaisa 2-Column Product Layout */
+    .product-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Ek line me 2 cards */
+        gap: 8px !important;
+        padding: 8px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Product Card Mobile Design */
+    .product-card {
+        background: #ffffff !important;
+        border-radius: 4px !important;
+        padding: 8px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+
+    /* Card ke andar ki photo */
+    .product-card img {
+        width: 100% !important;
+        height: 130px !important;
+        object-fit: contain !important;
+        margin-bottom: 5px !important;
+    }
+
+    .product-card p {
+        font-size: 13px !important;
+        margin: 3px 0 !important;
+        text-align: center !important;
+    }
+
+    /* Orange "Buy Now" Button */
+    .buy-btn {
+        width: 100% !important;
+        padding: 8px 0 !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        background-color: #ff9f00 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 2px !important;
+        margin-top: 5px !important;
+        cursor: pointer;
+    }
+
+    /* Order Details Form Box Fix */
+    .modal-content {
+        width: 90% !important;
+        max-width: 95% !important;
+        padding: 15px !important;
+        margin: 10% auto !important;
+    }
+    
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+
+
+
+/* Jo class aapne HTML me likhi hai, usi ka style */
+.your-button-class {
+    background-color: #1b8a3e; /* Green color */
+    color: white;              /* White text */
+    border: none;              /* Black border hatane ke liye */
+    padding: 10px 24px;        /* Button ka size bada karne ke liye */
+    font-size: 16px;           /* Text size */
+    font-weight: bold;         /* Text ko bold karne ke liye */
+    border-radius: 6px;        /* Round corners */
+    cursor: pointer;           /* Hover karne par hand icon */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+.your-button-class:hover {
+    background-color: #146c2f; /* Hover karne par dark green */
+}
+
+
+collection ke liye
+
+/* General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Navbar Styling (Just for reference) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #1b8a3e; /* Active page green dikhega */
+}
+
+/* ==========================================
+   COLLECTION PAGE STYLES 
+   ========================================== */
+.collection-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #222;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1b8a3e;
+    margin-bottom: 15px;
+}
+
+/* Green Buy Now Button code from earlier */
+.your-button-class {
+    background-color: #1b8a3e;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.your-button-class:hover {
+    background-color: #146c2f;
+}
+
+/* ==========================================
+   CONTACT PAGE STYLES 
+   ========================================== */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.contact-box {
+    background: #fff;
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-box h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #222;
+}
+
+.contact-box p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #1b8a3e; /* Focus karne par border green hoga */
+}
+
+.submit-btn {
+    background-color: #1b8a3e;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #146c2f;
+}
+
+
+slider ke liye
+
+/* Slider ka main frame */
+.slider-container {
+    width: 100%;
+    max-width: 1200px; /* Aapke content ke hisab se width */
+    margin: 20px auto;  /* Upar-neeche thoda gap aur center alignment */
+    overflow: hidden;   /* Jo images screen se bahar hain wo chhup jayengi */
+    border-radius: 8px; /* Corners thode round karne ke liye */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sabhi slides ko ek line me lane ke liye wrapper */
+.slider {
+    display: flex;
+    width: 300%; /* Agar 3 images hain to 300% (jitni images, utna guna) */
+    transition: transform 0.5s ease-in-out; /* Slide hone ka smooth effect */
+}
+
+/* Har ek single slide ki styling */
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Image stretch nahi hogi */
+    display: block;
+}
+
+
+/* Aapke logo image ki CSS class ya tag */
+.navbar img, .logo img {
+    height: 100px; /* Ya jo bhi aapki size ho */
+    mix-blend-mode: multiply; /* Yeh white background ko transparent bana dega */
+}
