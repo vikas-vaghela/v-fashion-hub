@@ -180,9 +180,8 @@
         }
     }
 
-    
-</script>
     <script>
+    // 1. HTML elements ko select karna
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
     let index = 0;
@@ -190,17 +189,21 @@
     function startSlider() {
         index++;
         
-        // Agar aakhri slide par pahunch jaye to wapas pehli image par aaye
+        // 2. Agar aakhri slide par pahunch jaye to wapas pehli image par aaye
         if (index >= slides.length) {
             index = 0;
         }
         
-        // Images ko smoothly left side slip (translate) karne ka logic
-        slider.style.transform = 'translateX(-${index * 100}%)';
+        // 3. Images ko smoothly left side slip karne ka main logic
+        slider.style.transform = "translateX(-" + (index * 100) + "%)";
     }
 
-    // Har 3 second (3000 milliseconds) me banner apne aap slip hoga
+    // 4. Har 3 second (3000ms) me banner apne aap slip hoga
     setInterval(startSlider, 3000);
+</script>
+
+</body>
+</html>
 </script
 </body>
 </html>
