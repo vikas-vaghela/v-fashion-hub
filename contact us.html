@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+    /* Form ka main container */
+    #whatsappForm {
+        display: flex;
+        flex-direction: column; /* Isse sab kuch ek ke niche ek aayega */
+        gap: 15px; /* Inputs ke beech me barabar space */
+        max-width: 400px; /* Form ki width set karne ke liye */
+        margin: 20px auto 0 auto; /* Form ko center me lane ke liye */
+        text-align: left;
+    }
+
+    /* Labels ki styling */
+    #whatsappForm label {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: -5px; /* Label aur input ko paas lane ke liye */
+        display: block;
+    }
+
+    /* Input fields aur Textarea ki styling */
+    #whatsappForm input, 
+    #whatsappForm textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box; /* Padding se width na badhe isliye */
+    }
+
+    /* Textarea ki height */
+    #whatsappForm textarea {
+        height: 100px;
+        resize: vertical; /* User height badi-choti kar sake */
+    }
+
+    /* Send Message Button ki styling (Agar aapki classes pehle se hain toh theek, nahi toh ye use karein) */
+    .send-btn {
+        background-color: #25D366; /* WhatsApp Green Color */
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .send-btn:hover {
+        background-color: #128C7E; /* Hover karne par dark green */
+    }
+</style>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - V Fashion Hub</title>
+    </head>
+<body>
+
+    <nav class="navbar">
+
+        <ul class="nav-links">
+                <li><a href="home page.html">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    <main class="contact-container">
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <p>Koi bhi sawal ho ya order ki jankari chahiye, hamein message karein!</p>
+            
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                
+                <label>Aapka Naam</label>
+                <input type="text" id="customerName" placeholder="Enter your name" required>
+
+                <label>Email Address</label>
+                <input type="email" id="customerEmail" placeholder="Enter your email" required>
+
+                <label>Message</label>
+                <textarea id="customerMessage" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+            </div>
+    </main>
+
+    <script>
+    function sendToWhatsApp(event) {
+        // Isse page reset/reload nahi hoga
+        event.preventDefault();
+
+        // ⚠️ APNA REAL NUMBER YAHAN DALIE (Jaise: "919876543210")
+        const myPhoneNumber = "917096254826"; 
+
+        const name = document.getElementById('customerName').value;
+        const email = document.getElementById('customerEmail').value;
+        const message = document.getElementById('customerMessage').value;
+
+        // Ek hi line me simple text message format
+        const textMessage = "New Message from V Fashion Hub%0A%0A*Name:* " + encodeURIComponent(name) + "%0A*Email:* " + encodeURIComponent(email) + "%0A*Message:* " + encodeURIComponent(message);
+
+        const whatsappURL = "https://api.whatsapp.com/send?phone=" + myPhoneNumber + "&text=" + textMessage;
+
+        // WhatsApp open karne ke liye
+        window.open(whatsappURL, '_blank');
+    }
+    </script>
+    </body>
+</html>
